@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Sign-up</title>{% endblock title %}
+
+{% block content %}
+    <br>
+    <div class="container" style="align-items: center;">
+    
+        <div class="row">
+            <div class="col-lg-5">
+                <form action="{{url_for('sign_up')}}" method="POST">
+
+                    <!-- Header Text -->
+                    <div>
+                        <h5 style="text-align: center;">Sign-up</h5>
+                    </div>
+
+                    <!-- Username -->
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" class="form-control" name="username">
+                    </div>
+
+                     <!-- Email-->
+                     <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" name="email">
+                    </div>
+
+                    <!-- Password-->
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" name="password">
+                    </div>
+
+
+                    <!-- Button for submitting form -->
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

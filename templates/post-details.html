@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Post Details</title>{% endblock title %}
+
+{% block content %}
+
+{% if single_course %}
+<br>
+<div class="main" style="text-align: center;">
+    <div class="container">
+        <div class="card">
+
+            <div class="card-header">
+                <h3>{{single_course.title}}</h3>
+            </div><br>
+
+            <div>
+                <h5>Instructor</h5>
+                <p>{{single_course.instructor}}</p>
+            </div><br>
+
+            <div>
+                <h5>Price</h5>
+                <p>{{single_course.price}} Bath</p>
+            </div><br>
+
+            <div>
+                <h5>Duration</h5>
+                <p>{{single_course.duration}} Hours</p>
+            </div><br>
+
+            <div>
+                <h5>Description</h5>
+                <p>{{single_course.description}}</p>
+            </div><br>
+
+            <div>
+                <a class="btn btn-warning" href="/update/{{single_course.id}}" role="button">Update</a>
+                <a class="btn btn-danger" href="/delete/{{single_course.id}}" role="button" onclick="return confirm('ต้องการลบหรือไม่ ?');">Delete</a>
+            </div><br>
+
+        </div>
+    </div>
+</div><br>
+{% endif %}
+{% endblock content %}

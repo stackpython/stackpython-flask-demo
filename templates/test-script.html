@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <title>Test Script</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+
+    <div class="main" style="text-align: center;">
+        <h1>Hello, JavaScript</h1>
+        <p id="id1">Test writing JavaScript</p>
+        <button type="button" onclick="myFunc1()">Change Text</button>
+
+        <p id="id2">STACKPYTHON</p>
+        <button type="button" onclick="myFunc2()">Change Font Size</button>
+
+        <h1 id="id3">Default</h1>
+        <button type="button" onclick="myFunc3()">Click to Confirm</button>
+    </div>
+
+    <script src="{{url_for('static', filename='js/testScript.js')}}"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Random Menu</title>{% endblock title %}
+
+{% block content %}
+    <br>
+    <div class="main" style="text-align: center;">
+        <div style="background-color: #f8f8f8;
+            margin-left: 40px; margin-right: 40px; font-size: 40px;">
+            <div id="myMenu">กินอะไรดี</div>
+
+            <button
+                type="button" class="btn btn-primary" onclick="randomMenu()">Random
+            </button>
+            <button
+                type="button" class="btn btn-success" onclick="location.reload()">Random Again
+            </button>
+            
+        </div>
+    </div>
+
+    <script>
+        function randomMenu() {
+            var menu = document.getElementById("myMenu");
+            if (menu.innerHTML === "กินอะไรดี") {
+                menu.innerHTML =  "{{menu_data}}";
+            }
+            else {
+                menu.innerHTML = "Random again?"
+            }
+        }
+    </script>
+{% endblock content %}

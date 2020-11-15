@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Update Course</title>{% endblock title %}
+
+{% block content %}
+    <br>
+    <div class="container" style="align-items: center;">
+        {% if data %}
+        <div class="row">
+            <div class="col-lg-5">
+                <form action="/update/{{data.id}}" method="POST">
+
+                    <!-- Header Text -->
+                    <div>
+                        <h5 style="text-align: center;">Update your course here</h5>
+                    </div>
+
+                    <!-- Course Name -->
+                    <div class="form-group">
+                        <label>Course Name</label>
+                        <input type="text" class="form-control" name="title" value="{{data.title}}">
+                    </div>
+
+                    <!-- Instructor Name -->
+                    <div class="form-group">
+                        <label>Instructor Name</label>
+                        <input type="text" class="form-control" name="instructor" value="{{data.instructor}}">
+                    </div>
+
+                    <!-- Course Price -->
+                    <div class="form-group">
+                        <label>Price</label>
+                        <input type="number" class="form-control" name="price" value="{{data.price}}">
+                    </div>
+
+                    <!-- Course Duration -->
+                    <div class="form-group">
+                        <label>Duration</label>
+                        <input type="number" class="form-control" name="duration" value="{{data.duration}}">
+                    </div>
+
+                    <!-- Course Description -->
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea class="form-control" rows="5" name="description">{{data.description}}</textarea>
+                    </div>
+
+                    <!-- Button for submitting form -->
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn btn-primary">Update Course</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+{% endblock content %}

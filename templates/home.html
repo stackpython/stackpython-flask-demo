@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Home</title>{% endblock title %}
+
+{% block content %}
+
+    {% for courses in all_courses %}
+    <br>
+    <div class="main" style="text-align: center;">
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <h3>{{courses.title}}</h3>
+                </div>
+
+                <div class="card-body">
+                    <p>Instructor: {{courses.instructor}}</p>
+                    <p>Date Posted: {{courses.date_created.strftime("%x")}}</p>
+                    <a class="btn btn-success" href="/post-details/{{courses.id}}" role="button">See more</a>
+                </div>
+
+            </div>
+        </div>
+    </div><br>
+    {% endfor %}
+{% endblock content %}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Login</title>{% endblock title %}
+
+{% block content %}
+    <br>
+    <div class="container" style="align-items: center;">
+    
+        <div class="row">
+            <div class="col-lg-5">
+                <form action="#" method="POST"> 
+                    {{ form.csrf_token }} 
+                      
+                    <!-- Header Text -->
+                    <div>
+                        <h5 style="text-align: center;">You have to login before reading this post</h5>
+                        <p>Didn't have an account ? <a href="{{url_for('sign_up')}}">Sign Up</a></p>
+                    </div>
+
+                    <!-- Username -->
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" class="form-control" name="username">
+                        
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" name="password">
+                        
+                    </div>
+
+                    <!-- Button for submitting form -->
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                        
+                    </div>
+                </form><br><br>  
+                
+            </div>
+           
+        </div>
+    
+    </div>
+{% endblock content %}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Covid Dashboard</title>{% endblock title %}
+
+{% block content %}
+    <br>
+    <div class="main" style="text-align: center;">
+        <h1>Covid Dashboard</h1>
+        <p>อัพเดตล่าสุด {{last_updated}}</p>
+
+        {% if new_confirmed_case %}
+        <div>
+            <p>ผู้ติดเชื้อล่าสุด<p style="color: gray; font-size: 80px; font-weight: bolder;">{{new_confirmed_case}}</p></p>
+        </div>
+        {% endif %}
+
+        {% if confirmed_case %}
+        <div>
+            <p>ยืนยันผู้ป่วยทั้งสิ้น<p style="color: gray; font-size: 40px; font-weight: bolder;">{{confirmed_case}}</p></p>
+        </div>
+        {% endif %}
+
+        {% if recovered_case %}
+        <div>
+            <p>ยืนยันหายแล้วทั้งสิ้น<p style="color: green; font-size: 40px; font-weight: bolder;">{{recovered_case}}</p></p>
+        </div>
+        {% endif %}
+
+        {% if hospitalized_case %}
+        <div>
+            <p>ยืนยันอยู่โรงพยาบาลทั้งสิ้น<p style="color: rgba(255, 174, 0, 0.849); font-size: 40px; font-weight: bolder;">{{hospitalized_case}}</p></p>
+        </div>
+        {% endif %}
+
+        {% if new_deaths_case %}
+        <div>
+            <p>เสียชีวิตล่าสุด<p style="color: red; font-size: 40px; font-weight: bolder;">{{new_deaths_case}}</p></p>
+        </div>
+        {% else %}
+        <div>
+            <p>เสียชีวิตล่าสุด<p style="color: red; font-size: 40px; font-weight: bolder;">0</p></p>
+        </div>
+        {% endif %}
+
+    </div>
+{% endblock content %}

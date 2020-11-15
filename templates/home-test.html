@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <title>Home Test</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+
+    <div class="main" style="text-align: center;">
+        <h1>Hello, {{name}}</h1>
+        <p>I love to learn Flask</p>
+        <img src="static/image/meme1.png" alt="meme1" height="400" width="400"><br>
+        <img src="{{url_for('static', filename='image/meme2.jpg')}}" alt="meme2" height="400" width="400">
+    </div>
+
+    <div class="main" style="text-align: center;">
+        <h1>Hello, {{name}}</h1>
+        <p>I love to learn Flask</p>
+        <img src="static/image/meme1.png" alt="meme1" height="400" width="400">
+        <img src="{{url_for('static', filename='image/meme2.jpg')}}" alt="meme2" height="400" width="400">
+    </div>
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>About</title>{% endblock title %}
+
+
+
+
+{% block content %}
+<br>
+    <div class="container emp-profile">
+        <div class="container" style="text-align: center;"> 
+            <h1 style="font-weight: bold; color: #8c1515;"> S T A C K P Y T H O N </h1> 
+          </div>
+  
+         <div class="container h-100">
+           <div class="row align-items-center h-100">
+               <div class="col-md-8 col-sm-12 mx-auto">
+                   <div class="h-100 justify-content-center">
+                       <div class="chat-container" style="overflow: auto; max-height: 80vh">
+                        <h4 style="text-align: center;"> STACKPYTHON (Chatbot V.1) </h4>
+                        <ul> <h5>Type the words following</h5>
+                          <li>hi </li>
+                          <li>hello </li>
+                          <li>how are you ? </li>
+                          <li>can you help me?</li>
+                          <li>หิว</li>
+                          <li>I am hungry</li>
+                          <li>กินอะไรดี ?</li>
+                          <li>ใช่</li>
+                          <li>etc</li>
+                        </ul>
+                           <!-- chat messages -->
+                       </div>
+                       <form id="target">
+                          <input class="input" type="text" value="" placeholder="Enter message..." id="input_message"/>
+                          <input type="submit" hidden>
+                       </form>
+                   </div>
+               </div>
+           </div>
+       </div>
+      
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://js.pusher.com/4.1/pusher.min.js"></script>
+    <script src="{{ url_for('static', filename='custom.js')}}"></script>
+{% endblock %}
